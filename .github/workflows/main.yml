@@ -22,7 +22,7 @@ jobs:
       	username: ${{ secrets.SSH_USER }}
       	key: ${{ secrets.SSH_KEY }}
       	script: |
-      	  cd WeatherWebapp/WeatherWebapp
+      	  cd weather-web-app
       	  git pull origin main
       	  pkill -f http.server || true
       	  nohup python3 -m http.server 8080 &
