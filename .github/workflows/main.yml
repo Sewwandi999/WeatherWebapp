@@ -18,12 +18,12 @@ jobs:
     - name: Deploy to Ubuntu via SSH
       uses: appleboy/ssh-action@master
       with:
-      	host: ${{ secrets.SSH_HOST }}
-      	username: ${{ secrets.SSH_USER }}
-      	key: ${{ secrets.SSH_KEY }}
-      	script: |
-      	  cd WeatherWebapp
-      	  git pull origin main
-      	  pkill -f http.server || true
-      	  nohup python3 -m http.server 8080 &
-      	  echo "✅️ Deployed and server restarted"
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USER }}
+        key: ${{ secrets.SSH_KEY }}
+        script: |
+          cd WeatherWebapp
+          git pull origin main
+          pkill -f http.server || true
+          nohup python3 -m http.server 8080 &
+          echo "✅️ Deployed and server restarted"
