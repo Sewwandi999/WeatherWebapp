@@ -12,5 +12,5 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Basic CI check
-      run: echo "✅ Code pushed! CI is working!"
+    - name: Run test.sh
+      run: bash test.sh
